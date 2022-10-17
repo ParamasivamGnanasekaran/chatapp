@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Application</title>
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="/socket.io/socket.io.js"></script>
+</head>
+
+<body class="page">
+    <form id="nameForm" class="nameForm">
+        <div class="nameSection">
+        <input type="text" class="name" id="name" name="name" placeholder="Enter Your name">
+        <button class="submit" type="submit">JOIN</button>
+        <div id="error-container" class="error-container"></div>
+        </div>
+    </form>
+    <div class="chatDisplay display" id="chatDisplay">
+        <section class="textArea">
+            <ul id="data" class="data">
+
+            </ul>
+        </section>
+        <form class="messageForm" id="messageForm">
+            <input type="text" class="message" id="message" name="message" placeholder="type here...">
+            <span>
+                <button class="send" id="send" type="submit">SEND</button>
+            </span>
+        </form>
+    </div>
+    <script src="https://requirejs.org/docs/release/2.3.5/minified/require.js"></script>
+    <script type="module" src="./app.js"></script>
+</body>
+
+</html>

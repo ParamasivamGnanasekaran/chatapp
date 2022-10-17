@@ -1,0 +1,101 @@
+.send , .submit{
+    background-color: rgb(91, 187, 252);
+    border-radius: 10px;
+    height:35px; 
+    width:50px;
+    cursor: pointer;
+}
+
+.message{
+    border-radius:10px ;
+    height:35px; 
+    width:90%;
+    padding-left: 10px;
+    word-wrap: break-word; 
+    margin: 5px;
+}
+
+
+.page{
+    display: flex;
+    justify-content: center;
+    width: 98%;
+    height: 540px;
+    background-image: url("/assests/background.jpg");
+}
+
+.messageForm{ 
+    position: fixed;
+    height: 50px;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    display: flex;
+   justify-content: center;
+   align-items: center;
+   background-color: grey;
+}
+
+section {
+    width: 1000px;
+    height: auto;
+    margin: auto;
+    display: block;
+    left: 0px;
+}
+
+.data {
+    list-style-type: none;
+    width: 100%;
+    padding-inline-start: 0px;
+    padding-bottom: 50px;
+   }
+
+ li{
+    padding: 10px;
+    word-wrap: break-word;
+    display: block;
+    width: 40%;
+    margin-bottom: 10px; 
+   border-radius: 10px;
+} 
+
+.me{
+    background-color: rgb(108, 220, 121);
+    margin-left: 700px;
+}
+
+.other{
+    background-color: rgb(250, 250, 250);
+    cursor:context-menu;
+}
+
+
+.nameForm{
+   margin-top: 250px;
+    height: 50px;
+}
+
+.display{
+    display: none;
+}
+
+
+.chatDisplay{
+    margin-left: -130px;
+}
+
+.nameSection{
+    display: block;
+}
+
+.error-container{
+    color: red;
+}
+
+.name{
+    border-radius:5px;
+    height:35px; 
+    width: auto;
+  
+}
