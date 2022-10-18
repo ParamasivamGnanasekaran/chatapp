@@ -84,6 +84,6 @@ socket.on('getTypingStatus', (data) => {
     }else{
       type.innerHTML = "";
     }
-  }, 2000);
+  }, 1000);
   
 })
