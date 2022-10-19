@@ -1,7 +1,5 @@
 let socket = io();
 let user;
-let myInterval;
-let lastText;
 let formName = document.querySelector('#nameForm');
 let inputName = document.querySelector('#name');
 let form = document.querySelector('#messageForm');
@@ -72,18 +70,12 @@ socket.on('userDisconnect', function (data) {
 
 input.addEventListener('input', function (e) {
   e.preventDefault();
-  socket.emit('typing', { message: input.value, user: user });
+  socket.emit('typing',  user );
 });
 
 socket.on('getTypingStatus', (data) => {
-  clearInterval(myInterval);
-  myInterval=setInterval(function () {
-    if(data.message!==lastText){
-      lastText=data.message;
-      type.innerHTML = '<b>' + data.user + '</b>' + " typing...";
-    }else{
-      type.innerHTML = "";
-    }
-  }, 1000);
-  
+  type.innerHTML = '<b>' + data + '</b>' + " typing...";
+  setTimeout(() => {
+    type.innerHTML = "";
+  }, 3000); 
 })

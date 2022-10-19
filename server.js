@@ -39,7 +39,7 @@ io.on('connection', (socket) => {
   });
 
   socket.on('typing',(name)=>{
-    socket.broadcast.emit('getTypingStatus', { message: name.message, user: name.user });
+    socket.broadcast.emit('getTypingStatus', name );
    });
 
   socket.on('message', msg => {
